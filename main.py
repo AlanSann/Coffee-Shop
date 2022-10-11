@@ -10,4 +10,10 @@ print(name + ", what would you like to drink today ? Here is what we are serving
 
 order = input()
 
-print("Sounds good " + name + ", we will have that " + order + " ready for you in a moment.")
+price = 1
+
+quantity = input("\nHow many of these would you like ?\n")
+
+total = price * int(quantity)
+
+print("Sounds good " + name + ", we will have your " + quantity + " " + order + " ready for you in a moment. Your total is : " + str(total) + " €")
