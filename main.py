@@ -1,4 +1,4 @@
-#from time import sleep
+from time import sleep
 
 
 print("\nHello, welcome to BetterHumanity Coffee Shop!\n ")
@@ -29,8 +29,8 @@ total = price * int(quantity)
 
 print("Sounds good " + name + ", we will have your " + quantity + " " + order + " ready for you in a moment. Your total is : " + str(total) + " €")
     
-#def drink_time():
-        #print("\nAre you finished ?")
+def drink_time():
+        print("\nAre you finished ?")
         
-#sleep(5); drink_time()
+sleep(5); drink_time()
     
