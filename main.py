@@ -17,12 +17,27 @@ else :
 
 menu =  "Black Coffee, Espresso, Latte, Capuccino, Frappuccino"
 
-print(name + ", what would you like to drink today ? Here is what we are serving :\n" + menu )
+order = input(name + ", what would you like to drink today ? Here is what we are serving :\n" + menu +"\n" )
 
-order = input()
-
-price = 1
-
+if order == "Black Coffee":
+    price = 1
+elif order == "Espresso":
+    price = 1.20
+elif order == "Latte":
+    whipped_cream = input("Do you want whipped cream ?\n")
+    if whipped_cream == "Yes" : 
+        price = 7.50
+    elif whipped_cream == "No" : 
+        price = 6.50
+elif order == "Capuccino":
+    price = 2
+elif order == "Frappuccino":
+    price = 10
+else :
+    print("Sorry, we don't have that here.")
+    price = 0
+    exit()
+    
 quantity = input("\nHow many of these would you like ?\n")
 
 total = price * int(quantity)
