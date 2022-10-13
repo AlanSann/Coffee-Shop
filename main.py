@@ -51,9 +51,18 @@ total = price * int(quantity)
 print("Sounds good " + name + ", we will have your " + quantity + " " + order + " ready for you in a moment. Your total is : " + str(total) + " €")
     
 # Creating a delay time method that prints this sentence 5 seconds after the previous action
+# In the method, add more scenario
 
 def drink_time():
-        end_coffee = input("\nAre you finished ?")
+        end_coffee = input("\nAre you finished ?\n")
+        if end_coffee == "Yes" : 
+            enjoy_time = input("Did you enjoy it?\n")
+            if enjoy_time == "Yes" : 
+                print("I am happy to hear that, have a good day and see you soon !\n")
+            elif enjoy_time == "No" :
+                print("So you have no taste, goodbye.")
+        else :
+            print("Take your time then")  
         
 sleep(5); drink_time()
 
