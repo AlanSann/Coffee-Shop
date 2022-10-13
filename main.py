@@ -1,23 +1,29 @@
 from time import sleep
 
 
+# Creating my scenario 
+
 print("\nHello, welcome to BetterHumanity Coffee Shop!\n ")
 
 name = input("What is your name ?\n")
 
-if name == "Ben" :
+# If, Elif, Else statements to play with 
+
+if name == "Ben" or name == "Patricia" :
     evil_status = input("Are you evil ?\n")
-    if evil_status == "Yes":
+    if evil_status == "Yes" :
         print("Get the fuck out of here!") 
         exit()
     elif evil_status == "No" : 
         print("Oh so you are one of those good Ben, Hello " + name + ", thank you so much for coming in today.\n")
 else :
     print("Hello " + name + ", thank you so much for coming in today.\n")
+    
+# Creating a list for our menu can be really usefull but we just could have declared a str variable if our menu remains like this
 
-menu =  "Black Coffee, Espresso, Latte, Capuccino, Frappuccino"
+menu =  ["Black Coffee", "Espresso", "Latte", "Capuccino", "Frappuccino"]
 
-order = input(name + ", what would you like to drink today ? Here is what we are serving :\n" + menu +"\n" )
+order = input(name + ", what would you like to drink today ? Here is what we are serving :\n" + str(menu) +"\n" )
 
 if order == "Black Coffee":
     price = 1
@@ -44,8 +50,12 @@ total = price * int(quantity)
 
 print("Sounds good " + name + ", we will have your " + quantity + " " + order + " ready for you in a moment. Your total is : " + str(total) + " €")
     
+# Creating a delay time method that prints this sentence 5 seconds after the previous action
+
 def drink_time():
-        print("\nAre you finished ?")
+        end_coffee = input("\nAre you finished ?")
         
 sleep(5); drink_time()
+
+
     
